@@ -1,0 +1,852 @@
+/*MENU DE INICIO ESTILOS*/
+ul.sin-punto {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.overlay>div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#video-fondo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+  /* Para ocultar cualquier parte del video que se desborde */
+}
+
+
+
+.btn-custom {
+  background-color: yellow;
+  /* Color de fondo */
+  border: solid;
+  /* Sin borde */
+  color: black;
+  /* Color del texto */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 25px 25px;
+  /* Espacio alrededor del texto */
+  text-align: center;
+  /* Texto centrado */
+  cursor: pointer;
+  /* Cambiar a un cursor de señal */
+  border-radius: 20px;
+  /* Bordes redondeados */
+
+}
+
+.btn-custom:hover {
+  background-color: rgb(172, 194, 50);
+  transform: translateY(-3px);
+}
+
+.nombre {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+  color: black;
+}
+
+#ingresa-nombre {
+  padding: 10px;
+  /* Espaciado interno */
+  border: 3px solid black;
+  /* Borde sólido con color azul */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  font-size: 25px;
+  /* Tamaño de la fuente */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+
+#ingresa-nombre:focus {
+  border-color: #ff7e5f;
+  /* Cambia el color del borde al enfocar */
+  box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
+  /* Sombra al enfocar */
+}
+
+.btn-aceptar {
+  background-color: yellow;
+  /* Color de fondo */
+  border: solid;
+  /* Sin borde */
+  color: black;
+  /* Color del texto */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20;
+  padding: 17px 10px 15px;
+  /* Espacio alrededor del texto */
+  text-align: center;
+  /* Texto centrado */
+  display: inline-block;
+  /* Elemento en línea */
+  cursor: pointer;
+  /* Cambiar a un cursor de señal */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  margin-left: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-aceptar:hover {
+  background-color: rgb(172, 194, 50);
+  transform: translateY(-3px);
+}
+
+.overlay-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.titulo-menu {
+  font-size: 40px;
+  /* Tamaño de la fuente */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.boton-menu button {
+  background-color: yellow;
+  border: solid;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 270px;
+  margin-bottom: 10px;
+}
+
+
+.boton-menu button:hover {
+  background-color: rgb(172, 194, 50);
+  transform: translateY(-3px);
+}
+
+#menu {
+  display: flex;
+  /* Utiliza flexbox para el diseño */
+  flex-direction: column;
+  /* La dirección principal es de arriba hacia abajo */
+  justify-content: center;
+  /* Centra verticalmente el contenido */
+  align-items: center;
+  /* Centra horizontalmente el contenido */
+  height: 100vh;
+  /* Utiliza el 100% de la altura de la ventana */
+}
+
+.titulo-menu {
+  margin-bottom: 20px;
+  position: center;
+  margin-left: 28px
+    /* Espacio adicional debajo del título */
+}
+
+.username {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+/*MENU DE INICIO ESTILOS FINAL*/
+
+
+/*OPERACION MATEMATICA ESTILOS INICIO */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+body {
+  text-align: center;
+  color: #262626;
+}
+
+.container {
+  font-family: 'Courier New', Courier, monospace;
+  max-width: 800px;
+  background-color: #5ebcfa;
+  margin: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  /* Ajusté el espaciado interno */
+  color: #ffffff;
+  /* Cambié el color del texto a uno más oscuro */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  /* Ajusté el sombreado */
+  margin-top: 50px;
+
+}
+
+.izquierdo {
+  width: 70%;
+  font-size: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.derecha {
+  margin-top: 20px;
+  /* Ajusta el margen superior */
+  display: flex;
+  /* Cambia el contenedor a un contenedor flexible */
+  flex-direction: row;
+  /* Cambia la dirección del flujo a horizontal */
+  align-items: center;
+  /* Centra los elementos verticalmente */
+  justify-content: center;
+}
+
+.msj {
+  font-size: 40px;
+  height: 50px;
+}
+
+.opcion {
+  font-family: 'Courier New', Courier, monospace;
+  width: 200px;
+  height: 100px;
+  font-size: 40px;
+  /* Cambié el tamaño de la fuente a 40px */
+  margin: 3px;
+  /* Cambié el margen a 3px */
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #5ebcfa;
+  /* Cambié el color de fondo a azul */
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.opcion:hover {
+  background-color: #1798ee;
+  transform: translateY(-3px);
+}
+
+#estadisticas {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+#victorias,
+#derrotas {
+  margin: 0 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+  color: #262626;
+}
+
+
+.modal-content {
+  background-color: #5ebcfa;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+}
+
+.modal-title {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 27%;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+
+#mensajeResultado {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+#video-OP {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Si aún hay fondo oscuro en los modales */
+.modal-backdrop {
+  display: none; /* Esto ocultará el fondo oscuro detrás del modal */
+}
+
+/*OPERACION MATEMATICA ESTILOS FINAL */
+
+
+/*MEMORIA ESTILOS INICIO*/
+.main-memoria {
+  width: 730px;
+  margin: 170px auto 50px;
+  display: flex;
+  align-items: center;
+}
+
+h1.titulo-memoria {
+  font-weight: bold;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 32px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #3498db;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.section1 {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 10px 10px 10px;
+  border-radius: 8px;
+}
+
+#tabla-botones button {
+  height: 100px;
+  width: 100px;
+  font-size: 40px;
+  color: #fff;
+  font-weight: bold;
+  margin: 3px;
+  border: none;
+  background-color: #3498db;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#tabla-botones button:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+}
+
+.section2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  /* Fondo semitransparente */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-left: 50px;
+}
+
+.estadisticas {
+  background-color: #0094f7;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px 50px;
+  margin-top: 20px;
+  font-size: 20px
+}
+
+#video-facil-numeros {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+img {
+  width: 80%;
+}
+
+/*MEMORIA ESTILOS FINAL*/
+
+/*MEMORIA modo de juego INICIO*/
+a {
+  text-decoration: none;
+}
+
+.titulo-menu-memoria {
+  margin-top: 320px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+}
+
+.boton-memoria {
+  background-color: yellow;
+  border: solid;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 270px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.boton-memoria:hover {
+  background-color: rgb(172, 194, 50);
+  transform: translateY(-3px);
+}
+
+/*MEMORIA modo de juego FINAL*/
+
+
+
+/*NUMEROS.JS ESTILOS INICIO*/
+
+/* Estilos para el contenedor principal */
+main {
+  text-align: center;
+}
+
+/* Estilos para el título */
+.titulo-menu-numeros {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 35px;
+  margin-bottom: 20px;
+  margin-top: 350px;
+}
+
+/* Estilos para el contenedor de botones */
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Estilos para los botones */
+.Facil,
+.Dificil {
+  background-color: yellow;
+  border: solid;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 25px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 150px;
+  /* Ancho fijo para los botones */
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Estilos para el hover de los botones */
+.Facil:hover {
+  background-color: rgb(5, 139, 28);
+  transform: translateY(-3px);
+  border-color: rgb(4, 255, 4);
+  color: rgb(0, 255, 0);
+}
+
+.Dificil:hover {
+  background-color: rgb(102, 0, 0);
+  transform: translateY(-3px);
+  border-color: red;
+  color: red;
+}
+
+/*NUMEROS.JS ESTILOS FINAL*/
+
+/* Estilos del Modal */
+.modal {
+  display: none;
+  /* Por defecto, el modal estará oculto */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente */
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #3498db;
+  margin: 15% auto;
+  /* Centra el modal verticalmente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos del Contenido */
+#mensajeResultado {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(255, 255, 255);
+}
+
+#animacionVictoria,
+#animacionDerrota {
+  width: 50%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 90px;
+}
+
+/* Estilos de los Botones */
+
+.salirBtn,
+.continuarBtn {
+  background-color: #3498db;
+  border: solid;
+  color: rgb(255, 255, 255);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 15px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100x;
+  /* Ancho fijo para los botones */
+  margin: 0 10px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.salirBtn:hover {
+  background-color: rgb(102, 0, 0);
+  transform: translateY(-3px);
+  border-color: red;
+  color: red;
+}
+
+
+.continuarBtn:hover {
+  background-color: rgb(5, 139, 28);
+  transform: translateY(-3px);
+  border-color: rgb(4, 255, 4);
+  color: rgb(0, 255, 0);
+}
+
+
+/*TRIVIA*/
+
+.titulo-trivia{
+  width: fit-content;
+  margin: 40px auto; 
+  margin-top: 70px;
+  text-align: center;
+}
+
+.subtitulo{
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+#pantalla-incial {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#pantalla-inicial {
+  margin: 60px 0;
+}
+
+.comenzarBtn {
+  background-color: yellow;
+  border: solid black;
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100x;
+  margin: 0 10px;
+  transition: .5s;
+}
+
+.comenzarBtn:hover {
+  transform: scale(1.1)
+}
+
+#pantalla-juego {
+  display: none;
+}
+.pantalla-juego{
+  max-width: 800px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.opciones{
+max-width: 400px;
+margin: auto;
+}
+
+.Optrivia{
+  display: flex;
+  position: relative;
+  align-items: center;
+  max-width: 400px;
+  margin: 30px auto;
+  cursor:pointer;
+}
+
+.Optrivia .letra{
+  background-color: #0094f7;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 50%;
+  line-height: 35px;
+  border: 5px solid #fff;
+  position: relative;
+  z-index: 2;
+}
+
+.Optrivia .respuesta{
+  background-color: #fff;
+  width: 100%;
+  font-size: 25px;
+  position: absolute;
+  margin-left: 30px;
+  border-radius: 0 20px 20px 0;
+  padding: 7px 0 7px 0 30px;
+}
+
+.Optrivia .respuestaAcertada{
+  background-color: yellowgreen;
+  color: #fff;
+}
+
+.Optrivia .letraAcertada{
+  background-color: yellowgreen;
+  color: #fff;
+}
+
+.Optrivia .respuestaNoAcertada{
+  background-color: darkred ;
+  color: #fff;
+}
+
+.Optrivia .letraNoAcertada{
+  background-color: darkred ;
+  color: #fff;
+}
+
+
+.statsTrivia {
+  background-color: #0094f7;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 8px 20px;
+  margin-left: auto; /* Alinear las estadísticas a la derecha */
+  margin-right: 20px; /* Ajuste de margen derecho */
+  font-size: 20px;
+  text-align: center;
+  margin-left: 50px;
+  
+}
+
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+#video-fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Estilos del Modal */
+.modal {
+  display: none;
+  /* Por defecto, el modal estará oculto */
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo semi-transparente */
+  overflow: auto;
+}
+
+.modal-content {
+  background-color: #3498db;
+  margin: 15% auto;
+  /* Centra el modal verticalmente */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Estilos del Contenido */
+#modalMensaje {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#modalBoton {
+  background-color: #3498db;
+  border: none;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 10px 20px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 20px;
+  border: solid #fff;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#modalBoton:hover {
+  background-color: #2980b9;
+  transform: translateY(-3px);
+  
+}
+
+.dropdown {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px; /* Ajusta el margen según sea necesario */
+}
+
+.btn-group{
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 20px
+}

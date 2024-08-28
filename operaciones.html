@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Operaciones</title>
+  <!--Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<!-- Contenedor principal de la página -->
+<div class="page-container">
+  <!-- Título del juego de operaciones -->
+  <h1 id="tituloJuego">Juego de Operaciones</h1>
+  <!-- Información del usuario (victorias y derrotas) -->
+  <div id="user-info" class="user-info">
+    <p id="victorias">Victorias: 0</p>
+    <p id="derrotas">Derrotas: 0</p>
+  </div>
+  <div class="container">
+    <div class="izquierdo">
+      <div class="container-operacion">
+        <span id="operacion"></span>
+        <span class="resultado" id="resultado"></span>
+      </div>
+      <span id="msj" class="msj"></span>
+    </div>
+  </div>
+
+  <!-- Opciones de respuesta -->
+  <div class="derecha">
+    <span id="op1" class="opcion" onclick="controlarRespuesta(this)"></span>
+    <span id="op2" class="opcion" onclick="controlarRespuesta(this)"></span>
+    <span id="op3" class="opcion" onclick="controlarRespuesta(this)"></span>
+  </div>
+</div>
+
+<!-- Modal para mostrar el resultado de la operación -->
+<div class="modal" tabindex="-1" id="resultadoModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="resultadoModalLabel">Resultado</h5>
+      </div>
+      <div class="modal-body">
+        <p id="mensajeResultado"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Botón para volver al menú principal -->
+<div class="btn-group">
+  <a href="menu.html"><button type="button" class="btn btn-danger">Volver</button></a>
+</div>
+
+<!-- Contenedor de video de fondo -->
+<div class="embed-responsive embed-responsive-16by9">
+  <video class="embed-responsive-item" id="video-OP" autoplay loop muted>
+    <source src="background/fondo mate.mp4" type="video/mp4">
+  </video>
+</div>
+
+<!-- operaciones.js-->
+<script src="operaciones.js"></script>
+
+<!--Bootstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- username.js-->
+<script src="username.js"></script>
+</body>
+
+</html>

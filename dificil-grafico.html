@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dificil Gráfico</title>
+
+  <!--Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="juego-memoria-body">
+  <main class="main-memoria">
+    <!-- Sección principal del juego -->
+    <section class="section1">
+      <h1 class="titulo-memoria">JUEGO DE MEMORIA DIFICIL</h1>
+      <!-- Tabla para los botones de las tarjetas -->
+      <table id="tabla-botones">
+        <!-- Filas de botones -->
+        <tr>
+          <td><button id="0" onclick="revelar(0)"></button></td>
+          <td><button id="1" onclick="revelar(1)"></button></td>
+          <td><button id="2" onclick="revelar(2)"></button></td>
+          <td><button id="3" onclick="revelar(3)"></button></td>
+          <td><button id="4" onclick="revelar(4)"></button></td>
+          <td><button id="5" onclick="revelar(5)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="6" onclick="revelar(6)"></button></td>
+          <td><button id="7" onclick="revelar(7)"></button></td>
+          <td><button id="8" onclick="revelar(8)"></button></td>
+          <td><button id="9" onclick="revelar(9)"></button></td>
+          <td><button id="10" onclick="revelar(10)"></button></td>
+          <td><button id="11" onclick="revelar(11)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="12" onclick="revelar(12)"></button></td>
+          <td><button id="13" onclick="revelar(13)"></button></td>
+          <td><button id="14" onclick="revelar(14)"></button></td>
+          <td><button id="15" onclick="revelar(15)"></button></td>
+          <td><button id="16" onclick="revelar(16)"></button></td>
+          <td><button id="17" onclick="revelar(17)"></button></td>
+
+        </tr>
+        <tr>
+          <td><button id="18" onclick="revelar(18)"></button></td>
+          <td><button id="19" onclick="revelar(19)"></button></td>
+          <td><button id="20" onclick="revelar(20)"></button></td>
+          <td><button id="21" onclick="revelar(21)"></button></td>
+          <td><button id="22" onclick="revelar(22)"></button></td>
+          <td><button id="23" onclick="revelar(23)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="24" onclick="revelar(24)"></button></td>
+          <td><button id="25" onclick="revelar(25)"></button></td>
+          <td><button id="26" onclick="revelar(26)"></button></td>
+          <td><button id="27" onclick="revelar(27)"></button></td>
+          <td><button id="28" onclick="revelar(28)"></button></td>
+          <td><button id="29" onclick="revelar(29)"></button></td>
+        </tr>
+        <tr>
+          <td><button id="30" onclick="revelar(30)"></button></td>
+          <td><button id="31" onclick="revelar(31)"></button></td>
+          <td><button id="32" onclick="revelar(32)"></button></td>
+          <td><button id="33" onclick="revelar(33)"></button></td>
+          <td><button id="34" onclick="revelar(34)"></button></td>
+          <td><button id="35" onclick="revelar(35)"></button></td>
+        </tr>
+      </table>
+    </section>
+    <!-- Sección para mostrar estadísticas -->
+    <section class="section2">
+      <h2 id="correctos" class="estadisticas">Correctos: 0</h2>
+      <h2 id="tiempo-restante" class="estadisticas">Tiempo: 80 segundos</h2>
+      <h2 id="movimientos" class="estadisticas">Movimientos: 0</h2>
+    </section>
+  </main>
+
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <p id="mensajeResultado"></p>
+      <img src="background/victoria.gif" id="animacionVictoria">
+      <img src="background/derrota.gif" id="animacionDerrota">
+      <div>
+        <a href="menu.html"><button class="salirBtn">Salir</button></a>
+        <button class="continuarBtn">Continuar Jugando</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dropdown para cambiar o volver -->
+  <div class="dropdown">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Cambiar o Volver
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="menu.html">Menu Principal</a></li>
+      <li><a class="dropdown-item" href="memoria.html">Cambiar Modo</a></li>
+      <li><a class="dropdown-item" href="grafico.html">Cambiar Dificultad</a></li>
+    </ul>
+  </div>
+
+  <!-- Contenedor de video de fondo -->
+  <div class="video-container">
+    <video id="video-fondo" autoplay loop muted>
+      <source src="background/Red Yellow Blue Geometric Patterns Event Video Background.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!--juego-memoria.js-->
+  <script src="memoria-dificil-graf.js"></script>
+
+  <!-- username.js-->
+  <script src="username.js"></script>
+
+  <!--Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
